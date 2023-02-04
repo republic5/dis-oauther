@@ -50,7 +50,7 @@ def login():
     with open('config.yml') as f:
         config = yaml.load(f, Loader=yaml.FullLoader)
         if (config['anti_vpn'] == True):
-            api_res = requests.get(f"http://check.getipintel.net/check.php?ip={ip}&contac XCt={config['email']}")
+            api_res = requests.get(f"http://check.getipintel.net/check.php?ip={ip}&contact={config['email']}")
             if (api_res.status_code != 429):
                 if (api_res.text == "1"):
                     return redirect('/failure')
