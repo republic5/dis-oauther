@@ -105,9 +105,5 @@ thread.start()
 
 with open('config.yml') as f:
     config = yaml.load(f, Loader=yaml.FullLoader)
-    token = config['token']
     
-if token == None:
-    token = os.environ['token']
-    
-bot.run(token=token)
+bot.run(token=config['token'])
