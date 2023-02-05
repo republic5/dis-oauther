@@ -7,6 +7,7 @@ import time
 import json
 import requests
 from threading import Thread
+import os
 
 bot = commands.Bot(command_prefix='.', intents=discord.Intents.all())
 
@@ -104,4 +105,7 @@ thread.start()
 with open('config.yml') as f:
     config = yaml.load(f, Loader=yaml.FullLoader)
 
+if config['token'] == None:
+  config['token'] = os.environ('token')
+    
 bot.run(token=config['token'])
