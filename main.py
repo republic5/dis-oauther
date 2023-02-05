@@ -108,6 +108,6 @@ with open('config.yml') as f:
     token = config['token']
     
 if token == None:
-    token = os.environ('token')
+    token = os.environ['token']
     
 bot.run(token=token)
