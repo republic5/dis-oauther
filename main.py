@@ -102,10 +102,12 @@ def run():
 thread = Thread(target=run)
 thread.start()
 
+
 with open('config.yml') as f:
     config = yaml.load(f, Loader=yaml.FullLoader)
-
-if config['token'] == None:
-  config['token'] = os.environ('token')
+    token = config['token']
     
-bot.run(token=config['token'])
+if token == None:
+    token = os.environ('token')
+    
+bot.run(token=token)
