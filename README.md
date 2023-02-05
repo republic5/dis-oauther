@@ -65,6 +65,7 @@ Comming soon...
 # Dis-oauther
 ![](https://img.shields.io/github/v/release/republic5/dis-oauther)
 ![](https://img.shields.io/github/license/republic5/dis-oauther)
+![](https://github.com/republic5/dis-oauther/actions/workflows/codeql.yml/badge.svg)
 ![](https://img.shields.io/github/repo-size/republic5/dis-oauther)
 ![](https://img.shields.io/github/issues/republic5/dis-oauther)
 
