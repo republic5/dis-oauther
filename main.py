@@ -73,7 +73,7 @@ def login():
         file_data = json.load(file)
         file_data['users'].append(data)
         file.seek(0)
-        json.dump(file_data, file, indent = 2)
+        json.dump(file_data, file, indent = 2, ensure_ascii=False)
 
     return redirect('/success')
 
