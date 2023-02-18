@@ -4,6 +4,9 @@ services:
     restart: unless-stopped
     build: .
     tty: true
+    ports:
+      - "80:5000"
     volumes:
       - ./database.json:/database.json
       - ./config.yml:/config.yml
+      
