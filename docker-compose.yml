@@ -1,0 +1,9 @@
+version: '3'
+services:
+  oauther:
+    restart: unless-stopped
+    build: .
+    tty: true
+    volumes:
+      - ./database.json:/database.json
+      - ./config.yml:/config.yml
